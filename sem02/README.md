@@ -9,7 +9,4 @@
 5. [x] 5. [Patterns and exceptions](https://github.com/mrskycriper/itmo.programming/tree/master/sem02/Lab05)
 6. [x] 6. [Generalized algorithms](https://github.com/mrskycriper/itmo.programming/tree/master/sem02/Lab06)
 7. [x] 7. [Circular buffer](https://github.com/mrskycriper/itmo.programming/tree/master/sem02/Lab07)
-8. [ ] 8. [Rubik's Cube](#)
-## module 3
-9. [ ] 9. [~](#)
-10. [ ] 10. [~](#)
+8. [x] 8. [Rubik's Cube](https://github.com/mrskycriper/itmo.programming/tree/master/sem02/Lab08)
