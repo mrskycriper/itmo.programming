@@ -21,7 +21,7 @@ void Menu::read_action()
 {
 	int buffer;
 	std::cin >> buffer;
-	if (buffer != 1 && buffer != 2 && buffer && buffer != 3 && buffer != 4 && buffer != 5 && buffer != 6)
+	if (buffer != 1 && buffer != 2 && buffer && buffer != 3 && buffer != 4 && buffer != 5 && buffer != 6 && buffer != 7)
 	{
 		std::cout << "Invalid action" << std::endl;
 	}
