@@ -1,4 +1,4 @@
-# itmo.programming / C
+# semester 1
 *Learning pure C*  
 [Tasks](https://github.com/mrskycriper/itmo.programming/tree/master/sem01/Tasks)
 ## module 1
