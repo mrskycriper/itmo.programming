@@ -1,4 +1,4 @@
-# itmo.programming / C++
+# semester 2
 *Learning C++ and OOP. Variants 19, 20*
 ## module 1
 1. [x] 1. [Passing a value by reference](https://github.com/mrskycriper/itmo.programming/tree/master/sem02/Lab01)
