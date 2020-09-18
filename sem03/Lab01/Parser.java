@@ -20,7 +20,6 @@ public class Parser
 		{
 			return null;
 		}
-		//System.out.println(buffer);
 
 		Scanner sc = new Scanner(new File(FileIn));
 
@@ -38,6 +37,23 @@ public class Parser
 			if (buffer.charAt(0) == '[')
 			{
 				bufferSectionName = buffer.substring(1, buffer.length() - 1);
+				while (!bufferSectionName.matches("[A-Za-z_0-9]+"))
+				{
+					System.err.println(buffer + " is not a valid section name, skipping");
+					while (sc.hasNext())
+					{
+						buffer = sc.nextLine();
+						if (!buffer.equals("") && buffer.charAt(0) == '[')
+						{
+							bufferSectionName = buffer.substring(1, buffer.length() - 1);
+							break;
+						}
+					}
+					if (!sc.hasNext())
+					{
+						return result;
+					}
+				}
 				buffer = sc.nextLine();
 				while (!buffer.isEmpty())
 				{
@@ -48,9 +64,16 @@ public class Parser
 					splittedComments = buffer.split(";");
 					splittedBuffer = splittedComments[0].split("=");
 					splittedBuffer[0] = splittedBuffer[0].trim();
-					splittedBuffer[1] = splittedBuffer[1].trim();
-					Node bufferNode = new Node(bufferSectionName, splittedBuffer[0], splittedBuffer[1]);
-					result.add(bufferNode);
+					if (!splittedBuffer[0].matches("[A-Za-z_0-9]+"))
+					{
+						System.err.println(splittedBuffer[0] + " is not a valid variable name, skipping");
+					}
+					else
+					{
+						splittedBuffer[1] = splittedBuffer[1].trim();
+						Node bufferNode = new Node(bufferSectionName, splittedBuffer[0], splittedBuffer[1]);
+						result.add(bufferNode);
+					}
 					if (!sc.hasNext())
 					{
 						break;
